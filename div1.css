@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.f-container{
+    background-image: url(./logistic-770x433.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    height: 100vh;
+}
+.fast-name{
+    font-size: 20px;
+    color:rgba(185, 5, 5, 0.911);
+    font-weight: bolder;
+}
+.delivery-name{
+    font-size: 30px;
+    color: rgb(14, 77, 71);
+    animation-name: delivery;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    position: relative;
+    top: -90px;
+    animation-fill-mode: forwards;
+}
+@keyframes delivery{
+    from{
+        top:-90px;
+    }
+    to{
+        top:0px
+    }
+}
+.fir-icon{
+    font-size: 17px;
+}
+.fast{
+    width: 100px;
+    height: 70px;
+    padding-right: 30px;
+}
+.logo{
+    background-color: whitesmoke;
+    border-radius: 7px 100px 7px 100px;
+    border: 3px solid rgb(255, 255, 255);
+    font-size: 10px;
+    padding: 0px 15px 0px 10px;
+    display: flex;
+    animation-name: logo;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    left: -500px;
+}
+@keyframes logo{
+    from{
+        left: -500px;
+    }
+    to{
+        left: 0px;
+    }
+}
+
+nav{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(5, 7, 90, 0.3) ;
+    padding: 10px;
+}
+.navbar{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: aliceblue;
+        font-size: large;
+        display: flex;
+        gap: 50px;
+        /* justify-content: center; */
+        align-items: center;
+}
+.para1{
+    font-size: 55px;
+    color: rgb(15, 15, 97);
+    font-weight: bolder;
+}
+.para2{
+    font-size: 25px;
+    padding-top: 18px;
+    color:rgb(28, 78, 5) ;
+    font-weight: bolder;
+} 
+.para3::before{
+    color: orange;
+    text-shadow: 2px 1px black;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    animation-iteration-count: infinite;
+    animation-duration: 6s ;
+    animation-name: move;
+    content:" ";
+    
+}
+@keyframes move{
+    0%{
+        content :"expanding business";
+    }
+    25%{
+        content :"faster deliveries";
+    }
+    50%{
+        content :"cash (CoD) handling";
+    }
+    75%{
+        content :"reliable shipping experience";
+    }
+    100%{
+        content :"reaching to 2,700+ towns and cities";
+    }
+}
+.content{
+    background-color: rgb(240, 248, 255,0.5);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* padding-left: 200px; */
+    margin-top: 20px;
+    text-align: center ;
+    line-height: 70px;
+}
+.top{
+
+    font-size: 30px;
+}
+.but{
+    margin: 19px 0px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+.btn{
+    padding: 10px 70px;
+    border-radius: 10px;
+    border:none;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(22, 22, 104);
+    font-weight: bolder;
+    font-size: 23px;
+}
+.start{
+    border:none;
+    font-size: 23px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(13, 9, 77);
+    padding: 10px 70px;
+    margin: 19px 0px;
+    font-weight: bolder;
+}
+label{
+    display: none;
+    color: white;
+}
+input{
+    display: none;
+}
+input:checked ~ .navbar{
+    right: 1px;
+}
+.fast1{
+    width: 100px;
+    height: 60px;
+    display: none;
+}
+.fast1{
+    animation-name: logo2;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+    /* animation-delay: 2s; */
+    left: -500px;
+}
+@keyframes logo2{
+    from{
+        left: -500px;
+    }
+    to{
+        left: 0px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:900px){
+    nav{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        justify-content: left;
+        background-color: rgba(5, 7, 90, 0.3) ;
+        padding: 10px;
+        position: relative;
+    }
+    label{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 30px;
+    }
+    .slide{
+        font-size: 40px;
+    }
+    .navbar{
+        position: fixed;
+        width: 280px;
+        height: 46vh;
+        background-color: rgb(45, 57, 126,0.9);
+        flex-direction: column;
+        font-size: 30px;
+        gap: 30px;
+        padding-top: 30px;
+        right: -300px;
+        top: 95px;
+        transition: all 2s;
+} 
+.navbar a:hover{
+        display: block;
+        color: aqua;
+        cursor: pointer;
+        transition: all 2s;
+        margin-right: 100px;
+}
+.content{
+    padding: 50px;
+}
+.f-container{
+    height: 100%;
+}
+.para1{
+    font-size: 34px;
+}
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+.but{
+flex-direction: column;
+gap: 20px;
+}
+.logo{
+    display: none;
+}
+.slide{
+    color: rgb(25, 46, 165);
+    font-size: 30px;
+}
+.nav{
+    background-color: none ;
+}
+.nav1{
+    background-color: rgb(255, 255, 255) ;
+}
+.para1{
+    font-size: 30px;
+}
+.para2{
+    font-size: 17px;
+}
+.para3::before{
+    font-size: 20px;
+}
+.btn{
+    padding: 10px 30px;
+}
+.start{
+    padding: 10px 30px;
+}
+.fast1{
+    display: block;
+}
+.navbar{
+    height: 37vh;
+    top:80px;
+    width: 220px;
+    font-size: 20px;
+}
+}
+

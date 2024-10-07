@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.t-main-container{
+    overflow: hidden;
+}
+.t-para1{
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 60px 0 70px 70px
+}
+.t-para2{
+    font-size: 37px;
+    font-weight: bolder;
+    line-height: 40px;
+}
+.t-para3{
+    font-size: 23px;
+    padding-top: 30px;
+    line-height: 25px;
+}
+.t-img{
+    width: 680px;
+    height: 400px;
+    box-shadow: 2px 2px 6px 1px rgb(36, 49, 168);
+    animation-name: t-img-scroll;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+
+}
+@keyframes t-img-scroll{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+.t-container2{
+    padding: 60px 0px 30px 80px;
+}
+.t-container1{
+    display: flex;
+    width: 1400px;
+}
+.t-scroll{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 222px;
+    margin-left: 180px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: tscroll;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-duration: 6s;
+    padding-bottom: 180px;
+}
+@keyframes tscroll{
+    0%{
+        transform: translateX(5%) ;
+        /* transform: scaleX(0.3); */
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
